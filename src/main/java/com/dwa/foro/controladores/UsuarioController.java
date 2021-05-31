@@ -20,7 +20,7 @@ public class UsuarioController {
 	ServicioUsuario servicioUsuario;
 	
 	
-	@GetMapping(path = {"/usuario/validar", "/"})
+	@GetMapping(path = {"/usuario/validar", ""})
 	public String validar() {
 		return "usuario/validar";
 	}
@@ -29,7 +29,7 @@ public class UsuarioController {
 	public String agregar (@RequestParam("username") String correoe,
 			@RequestParam("password") String clave,
 			Model modelo) {
-			return "redirect:temas/listar";			
+			return "redirect:/temas/listar";			
 		}
 		
 	
@@ -43,7 +43,7 @@ public class UsuarioController {
 	public String agregar(Model modelo, @ModelAttribute Usuario user, @RequestParam("clave") String clave, HttpSession sesion) {
 		boolean res = servicioUsuario.agregar(user, clave, sesion);
 		if(res) {
-			return "redirect:temas/listar";
+			return "redirect:/temas/listar";
 		}
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
 		return "usuario/agregar";
