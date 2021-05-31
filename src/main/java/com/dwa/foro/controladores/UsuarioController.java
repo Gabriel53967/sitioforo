@@ -20,7 +20,7 @@ public class UsuarioController {
 	ServicioUsuario servicioUsuario;
 	
 	
-	@GetMapping(path = {"/usuario/validar", ""})
+	@GetMapping(path = {"/usuario/validar", "/"})
 	public String validar() {
 		return "usuario/validar";
 	}

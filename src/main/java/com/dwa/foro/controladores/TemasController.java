@@ -46,7 +46,7 @@ public class TemasController {
 		if(!servicioTema.getMensaje().equals("")) {
 			modelo.addAttribute("error", servicioTema.getMensaje());
 		}		
-		return "temas/listar";
+		return "/temas/listar";
 	}
 	
 	@PostMapping("/temas/agregar")
@@ -80,7 +80,7 @@ public class TemasController {
 		if(!servicioReplica.getMensaje().equals("")) {
 			modelo.addAttribute("error", servicioReplica.getMensaje());
 		}
-		return "temas/detalles";
+		return "/temas/detalles";
 	}
 	
 	@PostMapping("/temas/agregarreplica")
