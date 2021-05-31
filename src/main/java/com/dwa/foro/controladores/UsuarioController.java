@@ -46,7 +46,7 @@ public class UsuarioController {
 			return "redirect:/temas/listar";
 		}
 		modelo.addAttribute("error", servicioUsuario.getMensaje());
-		return "/usuario/agregar";
+		return "usuario/agregar";
 	}
 	
 	@GetMapping("/usuario/salir")
