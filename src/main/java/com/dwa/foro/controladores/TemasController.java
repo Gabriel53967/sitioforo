@@ -33,7 +33,7 @@ public class TemasController {
 	ServicioTema servicioTema;
 	@Autowired	ServicioReplica servicioReplica;
 	
-	@GetMapping("temas/listar")
+	@GetMapping("/temas/listar")
 	public String listar(Model modelo) {
 		Iterable<Tema> temas = servicioTema.verTodos();
 		if(temas != null && temas.iterator().hasNext()) {
